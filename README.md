@@ -17,13 +17,13 @@ The two important functions are ddpl() and unit_prop(). The others are primarily
     - and (v) | (¬u) | (w) becomes (v) | (w)
     
  * ddpl() - performs the algorithm as better described on wikipedia. 
-  * if the set is empty then the conjunction of disjunctive clauses must be true
-  * if the empty clause is present then a contradiction has occured and therefore the premise is false. 
-    - usually implying the original premise is true using proof by contradiciton
+   * if the set is empty then the conjunction of disjunctive clauses must be true
+   * if the empty clause is present then a contradiction has occured and therefore the premise is false. 
+     - usually implying the original premise is true using proof by contradiciton
    * if a unit clause is present then propagate through the set removing it
    * if not then choose a unit clause from a disjunction of clauses and propagate with that clause.
-    - first on the pressumption it is true
-    - then on the presumption it is false, until it either passes or fails.
+     - first on the pressumption it is true
+     - then on the presumption it is false, until it either passes or fails.
    * if the set is not empty, repeat until a truth or contradiction has been found. 
 
 Feel free to use. 
