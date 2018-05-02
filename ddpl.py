@@ -43,7 +43,6 @@ def isNegate(c, a):
 
 # peform unit propagation on the set of conjuective clauses
 def unit_prop(clauses, a):
-    if a is None: return []
     clauses[:] = [cl for cl in clauses if not a in cl] # completely remove clauses with unit clause present
     clauses[:] = [isNegate(cl, a) for cl in clauses] # remove the negation of the unit clause from the clause
     return clauses
